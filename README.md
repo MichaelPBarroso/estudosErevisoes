@@ -7,7 +7,7 @@ Este repositorio será divido em pastas por linguagem de programação, cada lin
 * Android		-	Não iniciado;
 * Arduino		-	Não iniciado;
 * C#			-	Não iniciado;
-* Java			-	Não iniciado;
+* Java			-	Em desenvolvimento;
 * JavaScript	-	Não iniciado;
 * Node JS		-	Em desenvolvimento;
 * Python		-	Não iniciado;
