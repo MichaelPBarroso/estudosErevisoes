@@ -12,32 +12,29 @@ import br.com.estudos.singleton.EMFactorySingleton;
 public class ClienteBO {
 
 	EntityManager em;
+	ClienteDAO clienteDAO;
 	
 	public ClienteBO(){
-		em = EMFactorySingleton.getInstance().createEntityManager();
+		clienteDAO = new ClienteDAOImpl(EMFactorySingleton.getInstance().createEntityManager());
 	}
 	
-	public List<Cliente> listarClientes(){
-		ClienteDAO clienteDAO = new ClienteDAOImpl(em);
-		
+	public List<Cliente> listarClientes(){		
 		return clienteDAO.listar();
 	}
 	
 	public Cliente buscarCliente(int id) throws Exception{
-		ClienteDAO clienteDAO = new ClienteDAOImpl(em);
-		
 		return clienteDAO.findById(id);
 	}
 	
 	public void cadastrarCliente(Cliente cliente) throws Exception{
-		ClienteDAO clienteDAO = new ClienteDAOImpl(em);
-		
 		clienteDAO.insert(cliente);
 	}
 	
+	public void atualizarCliente(Cliente cliente) throws Exception{
+		clienteDAO.update(cliente);
+	}
+	
 	public void excluirCliente(int id) throws Exception{
-		ClienteDAO clienteDAO = new ClienteDAOImpl(em);
-		
 		clienteDAO.delete(id);
 	}
 }

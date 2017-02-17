@@ -34,6 +34,24 @@ public class Teste {
 		System.out.println(new Gson().toJson(clienteDAO.findById(1)));
 		System.out.println(new Gson().toJson(clienteDAO.listar()));
 		
+		System.out.println("Atualizando...");
+		
+		Cliente cliente1 = new Cliente();
+		cliente1.setNome("Wilker Ramalho");
+		cliente1.setId(5);
+		cliente1.setDataNascimento(null);
+		cliente1.setCpf("777.777.777-77");
+		
+		clienteDAO.update(cliente1);
+		
+		System.out.println(new Gson().toJson(clienteDAO.listar()));
+		
+		System.out.println("Excluir...");
+		
+//		clienteDAO.delete(8);
+		
+//		System.out.println(new Gson().toJson(clienteDAO.listar()));
+		
 		System.out.println("Concluido.");
 	}
 }

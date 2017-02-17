@@ -44,7 +44,7 @@ public class GenericDAOImpl<T, K> implements GenericDAO<T, K>{
 				em.getTransaction().rollback();
 			}
 			
-			throw new Exception("Ocorreu um erro ao atualizar");
+			throw new Exception("Ocorreu um erro ao atualizar: " + e.getMessage());
 		}
 	}
 
@@ -52,7 +52,7 @@ public class GenericDAOImpl<T, K> implements GenericDAO<T, K>{
 	public void delete(K id) throws Exception {
 		T entity = findById(id);
 		if(entity == null)
-			throw new Exception();
+			throw new Exception("Ocorreu um erro ao deletar");
 		
 		try{
 			em.getTransaction().begin();

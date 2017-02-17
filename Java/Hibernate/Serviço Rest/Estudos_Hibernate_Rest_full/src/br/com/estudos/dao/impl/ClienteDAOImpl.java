@@ -15,7 +15,7 @@ public class ClienteDAOImpl extends GenericDAOImpl<Cliente, Integer> implements 
 	}
 	
 	public List<Cliente> listar(){
-		TypedQuery<Cliente> query = em.createQuery("from Cliente", Cliente.class);
+		TypedQuery<Cliente> query = em.createQuery("from Cliente order by id", Cliente.class);
 		
 		return query.getResultList();
 	}
