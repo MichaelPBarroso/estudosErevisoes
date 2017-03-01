@@ -62,7 +62,6 @@ public class ClienteResource {
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response atualizarCliente(String clienteJSON){
-		
 		Cliente cliente = new Gson().fromJson(clienteJSON, Cliente.class);
 		
 		ClienteBO bo = new ClienteBO();
@@ -81,7 +80,6 @@ public class ClienteResource {
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response excluirCliente(@PathParam("id") int id){
-		
 		ClienteBO bo = new ClienteBO();
 		
 		try{

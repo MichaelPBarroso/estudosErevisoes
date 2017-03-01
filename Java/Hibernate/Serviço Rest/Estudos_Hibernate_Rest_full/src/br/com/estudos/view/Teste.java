@@ -39,8 +39,8 @@ public class Teste {
 		Cliente cliente1 = new Cliente();
 		cliente1.setNome("Wilker Ramalho");
 		cliente1.setId(5);
-		cliente1.setDataNascimento(null);
 		cliente1.setCpf("777.777.777-77");
+		//cliente1.setDataNascimento("11-09-1123");
 		
 		clienteDAO.update(cliente1);
 		

@@ -1,5 +1,7 @@
 package br.com.estudos.entity;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import javax.persistence.Column;
@@ -28,7 +30,7 @@ public class Cliente {
 	@Column(nullable=false, name="NM_CPF", length=14)
 	private String cpf;
 	
-	@Temporal(TemporalType.DATE)
+	//@Temporal(TemporalType.DATE)
 	@Column(name="DT_NASCIMENTO")
 	private Calendar dataNascimento;
 
@@ -69,10 +71,18 @@ public class Cliente {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Calendar dataNascimento) {
+	
+	public void setDataNascimento(Calendar dataNascimento){		
 		this.dataNascimento = dataNascimento;
 	}
-	
+	/*
+	public void setDataNascimento(String dataNascimento) throws ParseException {
+		final SimpleDateFormat dt = new SimpleDateFormat("dd-MM-yyyy");
+		
+		this.dataNascimento = Calendar.getInstance();
+		this.dataNascimento.setTime(dt.parse(dataNascimento));
+	}
+	*/
 	public String toString(){
 		return this.nome;
 	}

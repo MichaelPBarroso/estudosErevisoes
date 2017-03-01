@@ -52,7 +52,7 @@ public class GenericDAOImpl<T, K> implements GenericDAO<T, K>{
 	public void delete(K id) throws Exception {
 		T entity = findById(id);
 		if(entity == null)
-			throw new Exception("Ocorreu um erro ao deletar");
+			throw new Exception("Não existe cliente com este código!");
 		
 		try{
 			em.getTransaction().begin();

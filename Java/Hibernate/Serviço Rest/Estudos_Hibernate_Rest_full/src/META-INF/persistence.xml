@@ -10,6 +10,6 @@
 			<property name="javax.persistence.jdbc.user" value="OPS$RM74256"/>
 			<property name="javax.persistence.jdbc.password" value="310795"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/> 
-		</properties>	
+		</properties>
 	</persistence-unit>
 </persistence>
