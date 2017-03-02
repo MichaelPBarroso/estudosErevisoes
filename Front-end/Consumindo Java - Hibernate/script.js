@@ -154,7 +154,7 @@ function montarDataRest(data) {
 function buscarListaClientes() {
 	$.ajax({
 		method	:	'GET',
-		url		:	'http://localhost:7070/Estudos_Hibernate_Rest_full/cliente/cadastro',
+		url		:	'http://localhost:7070/Estudos_Hibernate_Rest_full/venda/cliente',
 		async	:	true
 	}).done(function (json) {
 		var tabela = "";
@@ -190,7 +190,7 @@ function buscarClienteId(id) {
 	var cliente;
 	$.ajax({
 		method	:	'GET',
-		url		:	'http://localhost:7070/Estudos_Hibernate_Rest_full/cliente/cadastro/' + id,
+		url		:	'http://localhost:7070/Estudos_Hibernate_Rest_full/venda/cliente' + id,
 		async	:	false
 	}).done(function (json) {
 		cliente = json;
@@ -230,7 +230,7 @@ function cadastrarCliente(dados) {
 	var dadosEnviar = JSON.stringify(dados);
 	$.ajax({
 		method		:	'POST',
-		url			:	'http://localhost:7070/Estudos_Hibernate_Rest_full/cliente/cadastro',
+		url			:	'http://localhost:7070/Estudos_Hibernate_Rest_full/venda/cliente',
 		async		:	true,
 		contentType	:	'application/json; charset=utf-8',
 		data		:	dadosEnviar
@@ -266,7 +266,7 @@ function alterarCliente(dados) {
 	var dadosEnviar = JSON.stringify(dados);
 	$.ajax({
 		method		:	'PUT',
-		url			:	'http://localhost:7070/Estudos_Hibernate_Rest_full/cliente/cadastro',
+		url			:	'http://localhost:7070/Estudos_Hibernate_Rest_full/venda/cliente',
 		async		:	true,
 		contentType	:	'application/json; charset=utf-8',
 		data		:	dadosEnviar
@@ -280,7 +280,7 @@ function alterarCliente(dados) {
 function excluirCliente(id) {
 	$.ajax({
 		method	:	'DELETE',
-		url		:	'http://localhost:7070/Estudos_Hibernate_Rest_full/cliente/cadastro/' + id,
+		url		:	'http://localhost:7070/Estudos_Hibernate_Rest_full/venda/cliente/' + id,
 		async	:	false
 	}).done(function (resposta) {
 		respostaAjax(resposta, "statusExcluir");
