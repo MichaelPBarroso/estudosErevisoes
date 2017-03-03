@@ -190,7 +190,7 @@ function buscarClienteId(id) {
 	var cliente;
 	$.ajax({
 		method	:	'GET',
-		url		:	'http://localhost:7070/Estudos_Hibernate_Rest_full/venda/cliente' + id,
+		url		:	'http://localhost:7070/Estudos_Hibernate_Rest_full/venda/cliente/' + id,
 		async	:	false
 	}).done(function (json) {
 		cliente = json;
