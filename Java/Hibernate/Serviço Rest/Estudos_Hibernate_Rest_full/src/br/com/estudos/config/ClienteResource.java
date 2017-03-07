@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 import br.com.estudos.bo.ClienteBO;
 import br.com.estudos.entity.Cliente;
 
-@Path("/cadastro")
+@Path("/cliente")
 public class ClienteResource {
 	
 	@GET

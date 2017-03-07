@@ -30,7 +30,7 @@ public class Cliente {
 	@Column(nullable=false, name="NM_CPF", length=14)
 	private String cpf;
 	
-	//@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.DATE)
 	@Column(name="DT_NASCIMENTO")
 	private Calendar dataNascimento;
 
