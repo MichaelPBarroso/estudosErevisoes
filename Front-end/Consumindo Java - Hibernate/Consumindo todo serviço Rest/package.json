@@ -1,0 +1,19 @@
+{
+  "name": "controle_de_vendas",
+  "version": "0.1.0",
+  "description": "Página de gerenciamento de vendas, clientes e produtos.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Pinheiro Barroso",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "datatables.net": "^1.10.13",
+    "datatables.net-dt": "^1.10.13",
+    "jquery": "^3.1.1",
+    "jquery-maskmoney": "^3.0.2",
+    "jquery.maskedinput": "^1.4.1"
+  }
+}

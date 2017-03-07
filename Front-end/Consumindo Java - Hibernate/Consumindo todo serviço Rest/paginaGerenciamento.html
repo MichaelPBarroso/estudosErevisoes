@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tela de gerenciamento</title>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#links-navbar" aria-expanded="false">
+					<span class="sr-only">Guia navegação para mobile</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Home</a>
+			</div>
+		
+			<div class="collapse navbar-collapse" id="links-navbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Sair</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="col-sm-3">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="container-fluid">
+						<img src="img/stromae-twitter-img.jpg" class="img-circle img-responsive center-block" alt="imagem" width="200" height="200" id="fotoFuncionario">
+					</div>
+					<br/>
+					<div class="container-fluid">
+						<p>
+							<label>Nome: </label><br/>
+							<span class="info-user" id="nomeFuncionario"></span><br/>
+						</p>
+						<p>
+							<label>Função: </label><br/>
+							<span class="info-user" id="funcaoFuncionario"></span><br/>
+						</p>
+						<p>
+							<label>Frase favorita: </label><br/>
+							<span class="info-user" id="fraseFuncionario"></span><br/>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-9">
+			<div class="container-fluid well">
+				<div class="row">
+					<div class="col-md-3 conteudo-menu" id="listarCliente">
+						<label>Clientes cadastrados</label><br/>
+						<span></span>
+					</div>
+					<div class="col-md-3 conteudo-menu" id="listarProduto">
+						<label>Produtos cadastrados</label><br/>
+						<span></span>
+					</div>
+					<div class="col-md-3 conteudo-menu" id="cadastrarCliente">
+						<label>Cadastrar novo cliente</label><br/>
+						<span></span>
+					</div>
+					<div class="col-md-3 conteudo-menu" id="cadastrarProduto">
+						<label>Cadastrar novo produto</label><br/>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="modal fade" id="modalCliente" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<span id="tituloModalCliente"></span>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="container-fluid">
+								<ul class="nav nav-tabs">
+									<li class="menuTab" id="liCliente"><a href="#listaCliente" data-toggle="tab" id="listaMenuCliente">Clientes</a></li>
+									<li class="menuTab" id="liInformacoesCliente"><a href="#infoCliente" data-toggle="tab" id="infoMenuCliente">Mais informações</a></li>
+									<li class="menuTab" id="liCadastroCliente"><a href="#cadastroCliente" data-toggle="tab" id="alterarCadastrarCliente"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row well">
+							<div class="tab-content">
+								<div id="listaCliente" class="tab-pane fade">
+									<table id="tabelaListaCliente" class="display">
+										<thead>
+											<tr>
+												<th>Código</th>
+												<th>Nome</th>
+												<th>Cpf</th>
+												<th>Data nascimento</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								<div id="infoCliente" class="tab-pane fade">
+									<div class="container-fluid">
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<span>Dados do cliente</span>
+												<span class="glyphicon glyphicon-pencil pull-right" id="btnInfoEditarCliente"></span>
+											</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-sm-6">
+														<label for="spanClienteNome">Nome do cliente: </label>
+														<span id="spanClienteNome"></span>
+													</div>
+													<div class="col-sm-6">
+														<label for="spanClienteCodigo">Código do cliente: </label>
+														<span id="spanClienteCodigo"></span>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-6">
+														<label for="spanClienteCpf">CPF do cliente: </label>
+														<span id="spanClienteCpf"></span>
+													</div>
+													<div class="col-sm-6">
+														<label for="spanClienteNascimento">Data de nascimento do cliente: </label>
+														<span id="spanClienteNascimento"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="cadastroCliente" class="tab-pane fade">
+									<div class="form-group" id="codigoCliente">
+										<label for="inputClienteCodigo">Código do Cliente:</label>
+										<input type="text" class="form-control" id="inputClienteCodigo" disabled="true"/>
+									</div>
+									<div class="form-group">
+										<label for="inputClienteNome">Nome do cliente:</label>
+										<input type="text" class="form-control" id="inputClienteNome"/>
+									</div>
+									<div class="form-group">
+										<label for="inputClienteCpf">Cpf do cliente:</label>
+										<input type="text" class="form-control" id="inputClienteCpf"/>
+									</div>
+									<div class="form-group">
+										<label for="inputClienteNascimento">Data de nascimento do cliente:</label>
+										<input type="date" class="form-control" id="inputClienteNascimento"/>
+									</div>
+									<input type="button" class="btn btn-primary btn-block" id="submitCadastroCliente" data-tipo=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="modal fade" id="modalProduto" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<span id="tituloModalProduto"></span>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="container-fluid">
+								<ul class="nav nav-tabs">
+									<li class="menuTab" id="liProduto"><a href="#listaProduto" data-toggle="tab" id="listaMenuProduto">Produtos</a></li>
+									<li class="menuTab" id="liInformacoesProduto"><a href="#infoProduto" data-toggle="tab" id="infoMenuProduto">Mais informações</a></li>
+									<li class="menuTab" id="liCadastroProduto"><a href="#cadastroProduto" data-toggle="tab" id="alterarCadastrarProduto"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="row well">
+							<div class="tab-content">
+								<div id="listaProduto" class="tab-pane fade">
+									<table id="tabelaListaProduto" class="display">
+										<thead>
+											<tr>
+												<th>Código</th>
+												<th>Nome</th>
+												<th>Preço</th>
+												<th>Descrição</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								<div id="infoProduto" class="tab-pane fade">
+									<div class="container-fluid">
+										<div class="panel panel-primary">
+											<div class="panel-heading">
+												<span>Dados do produto</span>
+												<span class="glyphicon glyphicon-pencil pull-right" id="btnInfoEditarProduto"></span>
+											</div>
+											<div class="panel-body">
+												<div class="row">
+													<div class="col-sm-6">
+														<label for="spanProdutoNome">Nome do produto: </label>
+														<span id="spanProdutoNome"></span>
+													</div>
+													<div class="col-sm-6">
+														<label for="spanProdutoCodigo">Código do produto: </label>
+														<span id="spanProdutoCodigo"></span>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-6">
+														<label for="spanProdutoPreco">Preco do produto:</label>
+														<span id="spanProdutoPreco"></span>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-2">
+														<label for="spanProdutoDescricao">Descrição do produto:</label>
+													</div>
+													<div class="col-sm-10">
+														<span id="spanProdutoDescricao"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="cadastroProduto" class="tab-pane fade">
+									<div class="form-group" id="codigoProduto">
+										<label for="inputProdutoCodigo">Código do produto:</label>
+										<input type="text" class="form-control" id="inputProdutoCodigo" disabled="true"/>
+									</div>
+									<div class="form-group">
+										<label for="inputProdutoNome">Nome do produto:</label>
+										<input type="text" class="form-control" id="inputProdutoNome"/>
+									</div>
+									<div class="form-group">
+										<label for="inputProdutoPreco">Preço do produto:</label>
+										<input type="text" class="form-control" id="inputProdutoPreco"/>
+									</div>
+									<div class="form-group">
+										<label for="inputProdutoDescricao">Descricao do produto:</label>
+										<textarea id="inputProdutoDescricao" class="form-control"></textarea>
+									</div>
+									<input type="button" class="btn btn-primary btn-block" id="submitCadastroProduto" data-tipo=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="node_modules/jquery.maskedinput/src/jquery.maskedinput.js"></script>
+	<script src="node_modules/jquery-maskmoney/dist/jquery.maskMoney.min.js"></script>
+	<script src="node_modules/datatables.net/js/jquery.dataTables.js"></script>
+	<link rel="stylesheet" href="node_modules/datatables.net-dt/css/jquery.dataTables.css">
+	<link rel="stylesheet" href="css/estilo.css">
+	<script src="js/script.js"></script>
+</body>
+</html>

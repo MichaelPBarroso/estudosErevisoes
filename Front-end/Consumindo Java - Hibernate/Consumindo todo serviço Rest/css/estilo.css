@@ -1,0 +1,45 @@
+body{
+	padding-top: 70px;
+}
+#fotoFuncionario{
+	margin-top: 13%;
+	margin-bottom: 10%;
+}
+.modal-header{
+	background-color: #5cb85c;
+	text-align: center;
+	color: white;
+}
+.img-menu{
+	padding: 1%;
+}
+#menu-4{
+}
+.conteudo-menu{
+	background-color: black;
+	color: white;
+	height: 15em;
+	width: 15em;
+	margin: 1em;
+
+	-webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.conteudo-menu label{
+	padding-top: 7em;
+}
+.conteudo-menu span{
+	margin-top: 2em;
+}
+#fotoFuncionario{
+	border-color: darkgrey;
+	border-width: 2px;
+	border-style: solid;
+}
+.info-user{
+	padding-left: 1em;
+}
