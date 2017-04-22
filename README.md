@@ -4,7 +4,7 @@ Este repositorio e uma forma de compartilhar meus estudos e revisões em diversa
 
 Este repositorio será divido em pastas por linguagem de programação, cada linguagem será subdivido por assunto, sendo ele alguma caracteristica da linguagem (recurso) ou por ser um projeto durante a aprendizagem da linguagem (Como no caso do Node JS, durante a aprendizam do curso do alura, vou disponibilizando o codigo), cada assunto estará no índice abaixo com o status da criação do projeto.
 
-* Android		-	Não iniciado;
+* Android		-	Em desenvolvimento;
 * Arduino		-	Não iniciado;
 * C#			-	Não iniciado;
 * Java			-	Em desenvolvimento;
