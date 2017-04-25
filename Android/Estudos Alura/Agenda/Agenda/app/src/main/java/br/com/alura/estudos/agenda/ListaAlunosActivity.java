@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import br.com.alura.estudos.agenda.Adapter.AlunosAdapter;
 import br.com.alura.estudos.agenda.dao.AlunoDAO;
 import br.com.alura.estudos.agenda.modelo.Aluno;
 
@@ -55,6 +56,11 @@ public class ListaAlunosActivity extends AppCompatActivity {
         });
 
         registerForContextMenu(listaAlunos);
+
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.RECEIVE_SMS)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECEIVE_SMS}, 231);
+        }
     }
 
     private void carregaLista() {
@@ -62,7 +68,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
         List<Aluno> alunos = dao.buscaAlunos();
         dao.close();
 
-        ArrayAdapter<Aluno> adapter = new ArrayAdapter<Aluno>(this, android.R.layout.simple_list_item_1, alunos);
+        AlunosAdapter adapter = new AlunosAdapter(this, alunos);
         listaAlunos.setAdapter(adapter);
     }
 

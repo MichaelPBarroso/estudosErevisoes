@@ -3,6 +3,7 @@
     package="br.com.alura.estudos.agenda">
 
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -24,6 +25,11 @@
             android:name=".FormularioActivity"
             android:label="@string/title_activity_formulario">
         </activity>
+        <receiver android:name=".receiver.SMSReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
 
         <!-- Tag provider ela é necessaria quando a aplicação esta sendo criada para o android 7,
          por questão de segurança do proprio android necessita adicionar esta tag,
