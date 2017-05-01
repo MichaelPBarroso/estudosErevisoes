@@ -36,7 +36,7 @@ public class Localizador implements GoogleApiClient.ConnectionCallbacks, Locatio
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         LocationRequest request = new LocationRequest();
-        request.setSmallestDisplacement(1);
+        request.setSmallestDisplacement(20);
         request.setInterval(1000);
         request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 

@@ -22,8 +22,7 @@ public class MapaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
 
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction tx = manager.beginTransaction();
+        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         mapaFragment = new MapaFragment();
         tx.replace(R.id.frame_mapa, mapaFragment);
         tx.commit();

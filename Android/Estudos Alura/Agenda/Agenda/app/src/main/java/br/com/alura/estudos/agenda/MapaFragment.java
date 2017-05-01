@@ -34,7 +34,7 @@ public class MapaFragment extends SupportMapFragment implements OnMapReadyCallba
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        this.mapa = mapa;
+        this.mapa = googleMap;
 
         LatLng posicaoDaEscola = pegaCoordenadaDoEndereco("Rua vergueiro 3185, Vila Mariana, Sao Paulo");
 
