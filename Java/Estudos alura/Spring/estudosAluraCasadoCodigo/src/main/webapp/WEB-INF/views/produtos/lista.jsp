@@ -7,30 +7,67 @@
 <head>
 <meta charset="UTF-8">
 <title>Livros Java, Android, IPhone, PHP, Ruby, e muito mais - Casa do codigo</title>
+
+<c:url value="/resources/css" var="cssPath"/>
+
+<link rel="stylesheet" href="${cssPath}/bootstrap.min.css">
+<link rel="stylesheet" href="${cssPath}/bootstrap-theme.min.css">
+
+<style type="text/css">
+	body{
+		padding-top: 60px;
+	}
+</style>
+
 </head>
 <body>
-	<h1>Lista de produtos</h1>
-	
-	<div>
-		${message }
-	</div>
-	
-	<table>
-		<tr>
-			<td>Título</td>
-			<td>Descrição</td>
-			<td>Páginas</td>
-		</tr>
-		<c:forEach items="${produtos}" var="produto">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" 
+						class="navbar-toggle collapsed" 
+						data-toggle="collapse" 
+						data-target="#navbar" 
+						aria-expanded="false" 
+						aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="${s:mvcUrl('HC#index').build()}">Casa do código</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="${s:mvcUrl('PC#listar').build()}">Produtos</a></li>
+					<li><a href="${s:mvcUrl('PC#form').build()}">Cadastro de Produtos</a></li>
+				</ul>
+			</div><!-- /.nav-collapse -->
+		</div>
+	</nav>
+	<div class="container">
+		<h1>Lista de produtos</h1>
+		
+		<div>
+			${message }
+		</div>
+		
+		<table class="table table-bordered table-striped table-hover">
 			<tr>
-				<td>
-					<a href="${s:mvcUrl('PC#detalhe').arg(0,produto.id).build()}">${produto.titulo}</a>
-				</td>
-				<td>${produto.descricao}</td>
-				<td>${produto.paginas}</td>
+				<th>Título</th>
+				<th>Descrição</th>
+				<th>Páginas</th>
 			</tr>
-		</c:forEach>
-	</table>
-	
+			<c:forEach items="${produtos}" var="produto">
+				<tr>
+					<td>
+						<a href="${s:mvcUrl('PC#detalhe').arg(0,produto.id).build()}">${produto.titulo}</a>
+					</td>
+					<td>${produto.descricao}</td>
+					<td>${produto.paginas}</td>
+				</tr>
+			</c:forEach>
+		</table>
+	</div>
 </body>
 </html>

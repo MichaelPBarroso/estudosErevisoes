@@ -44,7 +44,7 @@
 
   <header id="layout-header">
 		<div class="clearfix container">
-			<a href="/" id="logo">
+			<a href="${s:mvcUrl('HC#index').build()}" id="logo">
 			</a>
 			<div id="header-content">
 				<nav id="main-nav">
@@ -152,16 +152,9 @@
 		  </ul>
 		  
 		  <h2><a href="http://www.casadocodigo.com.br">Veja todos os livros que publicamos!</a></h2>
-		</section> 
-
-		
-		
+		</section>
 	<footer id="layout-footer">
 		<div class="clearfix container">
-
-
-
-
 			<div id="collections-footer">
 				<!-- cdc-footer -->
 				<p class="footer-title">Coleções de Programação</p>
