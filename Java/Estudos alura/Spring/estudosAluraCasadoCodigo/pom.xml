@@ -72,6 +72,8 @@
 			<version>1.2.16</version>
 			<scope>runtime</scope>
 		</dependency>
+		
+		<!-- Configuracao jpa e driver -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -135,8 +137,31 @@
 			<artifactId>spring-context-support</artifactId>
 			<version>4.1.0.RELEASE</version>
 		</dependency>
+		
+		<!-- Spring Security -->
 
+ 		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-config</artifactId>
+		    <version>4.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-taglibs</artifactId>
+		    <version>4.0.0.RELEASE</version>
+		</dependency>
+	    <dependency>
+	        <groupId>org.springframework.security</groupId>
+	        <artifactId>spring-security-web</artifactId>
+	        <version>4.0.0.RELEASE</version>
+	    </dependency>
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-core</artifactId>
+		    <version>4.0.0.RELEASE</version>
+		</dependency>
 	</dependencies>
+	 
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 		<maven.compiler.source>1.8</maven.compiler.source>
